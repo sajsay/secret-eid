@@ -1,0 +1,10 @@
+{
+  "env": {
+    "MONGODB_URI2": "mongodb://sajsay:deeyas786@ds125912.mlab.com:25912/secreteid",
+    "MONGODB_URI5": "mongodb://localhost:27017/secretnewdb",
+    "MONGODB_URI": "mongodb://localhost:27017/newdatabase",
+    "SECRET": "adjfkldjf;",
+    "user": "admin",
+    "pass": "password"
+  }
+}

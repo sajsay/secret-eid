@@ -1,0 +1,120 @@
+<link rel="stylesheet" type="text/css" href="secreteid.css" />
+<script type="text/javascript" src="secreteid.js"></script>
+
+<img class="image" src="download.png"></img>
+
+<div class="container">
+  <div class="row">
+
+    <head>
+
+      <!-- STYLING OF PAGE -->
+      <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 8.3%;
+          border: 1px solid black;
+          align-content: center;
+          display: inline-block;
+          background-color: lightyellow;
+
+        }
+      </style>
+
+    </head>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+
+
+        </div>
+        <div class="col-sm">
+          <h2>Welcome, Sajid</h2>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+<h2>Randomized Pairs</h2>
+
+        </div>
+        <div class="col-6">
+
+              <table border="1" style="height:400px; width: 300px;">
+                {{#each pairs}}
+                <tr>
+
+                  <td>{{giver.name}}</td>
+                  <td>{{givee.name}}</td>
+                </tr>
+                {{/each}}
+              </table>
+        </div>
+        <div class="col">
+          <label for="rand">Click to generate a random pairing</label><br>
+          <button class="randomButton" onclick="rand()">Randomize</button>
+          <p>Please endeavor to only click once per cycle</p>
+        </div>
+      </div>
+    </div>
+    <!-- <h2>Randomized Pairs</h2>
+
+    <table border="1">
+      {{#each pairs}}
+      <tr>
+
+        <td>{{giver.name}}</td>
+        <td>{{givee.name}}</td>
+      </tr>
+      {{/each}}
+    </table>
+
+
+    <br></br>
+
+    <button class="randomButton" onclick="rand()">Randomize</button>
+    <br></br>
+
+    <div id="setName"></div> -->
+    <script>
+      var randomNames = [
+        "Moose",
+        "Aria",
+        "Persis",
+        "Demi",
+        "Humad",
+        "Brian",
+        "Bill",
+        "David"
+      ];
+      function rand() {
+        //document.getElementById("setName")
+        //  .innerHTML = `<div class="flex-container">${randomNames[Math.floor(Math.random() * randomNames.length)]}</div>`
+        console.log('ggg');
+        let url = '/admin/rand'; //'http://localhost:3000/admin/rand';
+        //console.log(url)
+        fetch(url) // Call the fetch function passing the url of the API as a parameter
+          .then((resp) => resp.json())
+          .then(function (data) {
+            console.log(data)
+            location.reload();
+          })
+          .catch(function (error) {
+            console.log(error)
+            location.reload();
+          })
+
+      };
+
+
+    </script>
+
+  </div>
+
+</div>
