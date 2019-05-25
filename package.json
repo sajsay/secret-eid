@@ -6,7 +6,7 @@
   "proxy": "http://localhost:4000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
